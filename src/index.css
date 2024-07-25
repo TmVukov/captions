@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    height: 100vh;
+}
+
+.scrollable-element::-webkit-scrollbar {
+    width: 8px;
+    padding: 2px;
+}
+
+.scrollable-element::-webkit-scrollbar-track {
+    background: white;
+}
+
+.scrollable-element::-webkit-scrollbar-thumb {
+    background-color: rgb(99 102 241);
+    border-radius: 4px;
+}
+
+@layer components {
+    .spinner {
+        @apply animate-spin border-gray-300 h-12 w-12 rounded-full border-4 border-t-indigo-900
+    }
+}
